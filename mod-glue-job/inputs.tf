@@ -54,3 +54,9 @@ variable "script_path" {
     type = string
     nullable = false
 }
+
+variable "job_parameters" {
+  description = "Parametros del job, lista clave=valor."
+  type        = map(string)
+  default     = {}
+}

@@ -8,6 +8,6 @@ resource "aws_glue_job" "main" {
         name = "glueetl"
         script_location = "s3://${var.bucket_deployment}/${var.script_path}/${var.job_name}.py"
     }
-
+    default_arguments = local.job_arguments
     tags = local.job_tags
 }
