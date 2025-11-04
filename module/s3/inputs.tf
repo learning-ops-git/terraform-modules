@@ -21,7 +21,7 @@ variable "account_id"  {
   description = "Id of the account."
   type        = string
   validation {
-    condition     = length(var.domain) > 0
+    condition     = length(var.account_id) > 0
     error_message = "The account id cannot be an empty string"
   }
 }
