@@ -36,6 +36,12 @@ variable "environment" {
   }
 }
 
+variable "suffix" {
+  description = "An optional suffix to append to the S3 bucket name."
+  type        = string
+  default     = ""
+}
+
 variable "owner" {
   description = "The owner of the S3 bucket."
   type        = string
