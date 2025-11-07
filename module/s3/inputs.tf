@@ -56,3 +56,16 @@ variable "tags" {
   type        = map(string)
   default     = {}
 }
+
+variable "s3_notifications" {
+  description = "Configuration for S3 bucket notifications."
+  type = object({
+    enable_lambda = bool
+    lambda        = optional(list(object({ arn = string, events = list(string) })), [])
+  })
+
+  default = {
+    enable_lambda = false
+    lambda        = []
+  }
+}
