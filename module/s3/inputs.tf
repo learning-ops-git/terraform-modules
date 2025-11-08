@@ -61,7 +61,7 @@ variable "s3_notifications" {
   description = "Configuration for S3 bucket notifications."
   type = object({
     enable_lambda = bool
-    lambda        = optional(list(object({ arn = string, events = list(string) })), [])
+    lambda        = optional(list(object({ function_name = string, arn = string, events = list(string) })), [])
   })
 
   default = {
