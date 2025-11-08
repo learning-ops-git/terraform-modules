@@ -65,6 +65,7 @@ variable "s3_notifications" {
   })
 
   default = {
+    function_name = ""
     enable_lambda = false
     lambda        = []
   }
